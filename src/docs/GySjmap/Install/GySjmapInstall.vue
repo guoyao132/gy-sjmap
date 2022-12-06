@@ -1,5 +1,9 @@
 <template>
   <div class="guide-wrapper">
+    <gy-title>引入</gy-title>
+    <p>引入思极地图文件，需要再index.html中引入。</p>
+    <p>https://map.sgcc.com.cn/maps?v=3.0.0</p>
+    <p>https://map.sgcc.com.cn/products/js-sdk/v3/assets/js/turf.min.js</p>
     <gy-title>安装</gy-title>
     <p>使用 npm 安装。</p>
     <ShowCode code="npm install gy-sjmap --save"/>
@@ -13,6 +17,10 @@
     <ShowCode :code="code1"/>
     <p>按需引入，在相应的页面中引入</p>
     <ShowCode :code="code2"/>
+    <br/>
+    <gy-title>获取思极全局对象实例</gy-title>
+    <p>获取地图全局对象，方便加载地图组件。</p>
+    <ShowCode :code="code6"/>
     <br/>
     <gy-title>判断map加载完成</gy-title>
     <p>在其他页面中判断map是否加载完成</p>
@@ -102,6 +110,12 @@ onBeforeUnmount(() => {
   mapObj && mapObj.off('click', clickFun)
 })
 `;
+const code6 =
+`import {SGMap} from "gy-sjmap";
+//引入组件
+SGMap.plugin([SGMap.type]).then((data) => {
+});
+`
 const tableHeaderEvent = [
   {
     label: '事件名',

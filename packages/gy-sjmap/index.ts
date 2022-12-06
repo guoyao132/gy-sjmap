@@ -23,14 +23,35 @@ export default {
   install
 }
 export type {gySjmapType, MapOptType} from './hooks/gySjMap'
-
 //引用组件
-import {GySjmap} from "./components/GySjmap";
+import {GySjmap} from './components/GySjmap';
+import {GySjmapText} from './components/GySjmapText';
+import {GySjmapCircle} from './components/GySjmapCircle';
+import {GySjmapImage} from './components/GySjmapImage';
+import {GySjmapHtml} from './components/GySjmapHtml';
+import {GySjmapLine} from './components/GySjmapLine';
+import {GySjmapPolygon} from './components/GySjmapPolygon';
+import {GySjmapTask} from './components/GySjmapTask';
+import {GySjmapDraw} from './components/GySjmapDraw';
+import {GySjmapHeat} from './components/GySjmapHeat';
+import {GySjmapLonlat} from './components/GySjmapLonlat';
+
 export {
   SGMap,
   TURF,
   install,
+
   gySjMap,
   GySjmap,
+  GySjmapText,
+  GySjmapCircle,
+  GySjmapImage,
+  GySjmapHtml,
+  GySjmapLine,
+  GySjmapPolygon,
+  GySjmapTask,
+  GySjmapDraw,
+  GySjmapHeat,
+  GySjmapLonlat,
 }
 

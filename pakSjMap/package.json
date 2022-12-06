@@ -4,9 +4,11 @@
   "keywords": [
     "gy",
     "思极地图",
-    "SJMap"
+    "SJMap",
+    "Vue2",
+    "Vue3"
   ],
-  "version": "0.0.1",
+  "version": "0.0.8",
   "license": "MIT",
   "private": false,
   "files": [
@@ -14,8 +16,9 @@
     "scripts",
     "README.md"
   ],
-  "main": "lib/gy-sjmap.umd.js",
+  "main": "lib/gy-sjmap.es.js",
   "scripts": {
+    "postinstall": "node ./scripts/postinstall.js"
   },
   "dependencies": {
     "vue-demi": "^0.13.11"
@@ -25,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:guoyao132/gy-map.git"
+    "url": "git@github.com:guoyao132/gy-sjmap.git"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.1",

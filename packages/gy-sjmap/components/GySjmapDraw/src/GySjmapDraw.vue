@@ -189,6 +189,7 @@ export default defineComponent({
     }
     const endDraw = (finish?: boolean) => {
       if (status.value !== 'end') {
+        drawStatus.value = 'drawStart';
         status.value = 'end';
         drawObj.value.endDraw();
         finish && submitData();
