@@ -15,7 +15,6 @@ export default defineComponent({
     onMounted(() => {
       layerObj = new CreateImageLayer(mapId, props);
       watch(layerObj.finishDraw, () => {
-        console.log(layerObj.finishDraw);
         const runTask = proxy.$parent.runTask;
         if(runTask){
           runTask(layerObj, props)

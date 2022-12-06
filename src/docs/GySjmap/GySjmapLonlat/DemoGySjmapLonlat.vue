@@ -11,6 +11,8 @@
       在点击后会出发getLonlat事件，可获取经纬度。
     </p>
     <br/>
+    <gy-title>GySjmapLonlat 属性</gy-title>
+    <GyTable :tableData="propsData"/>
   </div>
 </template>
 
@@ -38,5 +40,4 @@ const propsData = ref([
   .GySjmapHtml{
 
   }
-
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div :class="['GySjmapLonlat-con', className]">
+  <div v-show="showCon" :class="['GySjmapLonlat-con', className]">
     {{ lonlat }}
   </div>
 </template>
