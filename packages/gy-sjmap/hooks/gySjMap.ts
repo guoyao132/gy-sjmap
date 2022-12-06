@@ -1,10 +1,7 @@
-// const SGMap = require('./sjmaps');
-import './sjmaps.js'
 // @ts-ignore
 const SGMap = window.SGMap;
 // @ts-ignore
 const TURF = window.turf;
-// SGMap.config.API_URL = 'https://map.sgcc.com.cn';
 import type {Ref, UnwrapRef} from 'vue-demi'
 import {reactive, ref, markRaw} from 'vue-demi';
 import streets from './Streets.json'
@@ -63,11 +60,11 @@ const gySjmapInit = (type:string): Ref<UnwrapRef<mapObj>> => {
   /**************************************/
   let map:Ref<any> = ref(null);
   let mapOpt:MapOpt = {
-    key: 'b7b4b226a65935d7962beb4076a16f39',
-    sn: '4ecbe00d61a13986bf7a8e1f6c6217e4',
+    key: '6c79050a2980311899dce77493288b92',
+    sn: '7157a38a73cf3067a1e69d1712e91bf9',
     centerPoint: [116.40531, 39.896884],
     minZoom: 1,
-    maxZoom: 18,
+    maxZoom: 20,
     zoom: 16,
     //左下角  右上角
     extent: [],
@@ -137,6 +134,10 @@ const gySjmapInit = (type:string): Ref<UnwrapRef<mapObj>> => {
   }
   //初始化地图
   const initMap = () => {
+    if(!(mapOpt.key && mapOpt.sn)){
+      alert('请添加地图你申请的appKey与你申请的appSecret！');
+      return
+    }
     // 申请的key和sn
     SGMap.tokenTask
       .login(mapOpt.key, mapOpt.sn)

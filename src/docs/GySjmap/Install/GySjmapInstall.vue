@@ -4,6 +4,7 @@
     <p>引入思极地图文件，需要再index.html中引入。</p>
     <p>https://map.sgcc.com.cn/maps?v=3.0.0</p>
     <p>https://map.sgcc.com.cn/products/js-sdk/v3/assets/js/turf.min.js</p>
+    <p>注：首先需要申请对应的你申请的appKey与你申请的appSecret，配置在相应的mapOpt中！</p>
     <gy-title>安装</gy-title>
     <p>使用 npm 安装。</p>
     <ShowCode code="npm install gy-sjmap --save"/>
